@@ -3,9 +3,9 @@ import morgan from 'morgan';
 
 // requireing routes
 import authRoute from './routes/auth.js';
-import userRoute from './routes/users.js';
-import roomRoute from './routes/rooms.js';
-import hotelRoute from './routes/hotels.js';
+import usersRoute from './routes/users.js';
+import roomsRoute from './routes/rooms.js';
+import hotelsRoute from './routes/hotels.js';
 
 // start express app
 const app = express();
@@ -40,8 +40,8 @@ if (app.get('env') === 'development') {
 
 // api routes middleware
 app.use('/api/v1/auth', authRoute);
-app.use('/api/v1/users', userRoute);
-app.use('/api/v1/rooms', roomRoute);
-app.use('/api/v1/hotels', hotelRoute);
+app.use('/api/v1/users', usersRoute);
+app.use('/api/v1/rooms', roomsRoute);
+app.use('/api/v1/hotels', hotelsRoute);
 
 export default app;
