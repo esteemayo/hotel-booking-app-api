@@ -38,6 +38,10 @@ app.use(express.json({ limit: '10kb' }));
 // compression middleware
 
 // test middleware
+app.use((req, res, next) => {
+  req.requestTime = new Date().toISOString();
+  next();
+});
 
 // api routes middleware
 app.use('/api/v1/auth', authRoute);
