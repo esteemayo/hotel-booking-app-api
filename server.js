@@ -16,6 +16,10 @@ const connectDB = async () => {
   }
 };
 
+mongoose.connection.on('disconnected', () => {
+  console.log('MongoDB Disconnected');
+});
+
 app.set('port', process.env.PORT || 8800);
 
 const server = app.listen(app.get('port'), async () => {
