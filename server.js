@@ -3,6 +3,12 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import 'colors';
 
+process.on('uncaughtException', (err) => {
+  console.log('UNCAUGHT EXCEPTION! 🔥 Shutting down...'.red.bold);
+  console.log(err.name, err.message);
+  process.exit(1);
+});
+
 import app from './app.js';
 
 dotenv.config({ path: './config.env' });
