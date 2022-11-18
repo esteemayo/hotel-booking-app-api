@@ -25,6 +25,7 @@ if (app.get('env') === 'development') {
 // limit request from same api
 
 // body Parser, reading data from body into req.body
+app.use(express.json({ limit: '10kb' }));
 
 // cookie parser middleware
 
