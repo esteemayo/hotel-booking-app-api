@@ -1,3 +1,4 @@
+/* eslint-disable */
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import 'colors';
@@ -21,5 +22,3 @@ const server = app.listen(app.get('port'), () => {
   connectDB();
   console.log(`App listening on port ↔ ${server.address().port}`.green.bold);
 });
-
-dotenv.config({ path: './config.env ' });
