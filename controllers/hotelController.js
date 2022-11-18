@@ -60,12 +60,9 @@ export const createHotel = asyncHandler(async (req, res, next) => {
 });
 
 export const updateHotel = asyncHandler(async (req, res, next) => {
-  const {
-    body: { name, slug },
-    params: { id: hotelId },
-  } = req;
+  const { id: hotelId } = req.params;
 
-  if (name) slug = slugify(name, { lower: true });
+  if (req.body.name) req.body.slug = slugify(req.body.name, { lower: true });
 
   const hotel = await Hotel.findByIdAndUpdate(
     hotelId,
