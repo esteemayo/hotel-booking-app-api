@@ -58,6 +58,24 @@ export const createHotel = asyncHandler(async (req, res, next) => {
   });
 });
 
-export const updateHotel = asyncHandler(async (req, res, next) => { });
+export const updateHotel = asyncHandler(async (req, res, next) => {
+  const { id: hotelId } = req;
+
+  const hotel = await Hotel.findByIdAndUpdate(hotelId, { $set: { ...req.body } }, {
+    new: true,
+    runValidators: true,
+  });
+
+  if (!hotel) {
+    return next(
+      new NotFoundError(`There is no hotel found with the given ID → ${hotelId}`)
+    );
+  }
+
+  res.status(StatusCodes.OK).json({
+    status: 'success',
+    hotel,
+  });
+});
 
 export const deleteHotel = asyncHandler(async (req, res, next) => { });
