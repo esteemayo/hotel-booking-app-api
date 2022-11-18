@@ -1,3 +1,4 @@
+import slugify from 'slugify';
 import { StatusCodes } from 'http-status-codes';
 import asyncHandler from 'express-async-handler';
 
@@ -59,7 +60,12 @@ export const createHotel = asyncHandler(async (req, res, next) => {
 });
 
 export const updateHotel = asyncHandler(async (req, res, next) => {
-  const { id: hotelId } = req.params;
+  const {
+    body: { name, slug },
+    params: { id: hotelId },
+  } = req;
+
+  if (name) slug = slugify(name, { lower: true });
 
   const hotel = await Hotel.findByIdAndUpdate(hotelId, { $set: { ...req.body } }, {
     new: true,
