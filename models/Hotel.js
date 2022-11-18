@@ -1,7 +1,7 @@
 import slugify from 'slugify';
-import { model, models, Schema } from 'mongoose';
+import mongoose from 'mongoose';
 
-const hotelSchema = new Schema({
+const hotelSchema = new mongoose.Schema({
   name: {
     type: String,
     required: [true, 'Hotel must have a name'],
@@ -57,6 +57,6 @@ const hotelSchema = new Schema({
   toObject: { virtuals: true },
 });
 
-const Hotel = models.Hotel || model('Hotel', hotelSchema);
+const Hotel = mongoose.models.Hotel || mongoose.model('Hotel', hotelSchema);
 
 export default Hotel;
