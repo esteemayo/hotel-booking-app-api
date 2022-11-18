@@ -18,7 +18,7 @@ const connectDB = async () => {
 
 app.set('port', process.env.PORT || 8800);
 
-const server = app.listen(app.get('port'), () => {
-  connectDB();
+const server = app.listen(app.get('port'), async () => {
+  await connectDB();
   console.log(`App listening on port ↔ ${server.address().port}`.green.bold);
 });
