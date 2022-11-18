@@ -1,6 +1,8 @@
 import { StatusCodes } from 'http-status-codes';
 import asyncHandler from 'express-async-handler';
 
+import NotFoundError from '../errors/notFound.js';
+
 const getAll = (Model) =>
   asyncHandler(async (req, res, next) => {
     const docs = await Model.find();
