@@ -2,6 +2,7 @@ import { StatusCodes } from 'http-status-codes';
 import asyncHandler from 'express-async-handler';
 
 import Hotel from '../models/Hotel.js';
+import NotFoundError from '../errors/notFound.js';
 
 export const getHotels = asyncHandler(async (req, res, next) => {
   const hotels = await Hotel.find();
