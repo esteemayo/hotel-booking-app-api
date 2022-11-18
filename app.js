@@ -6,6 +6,8 @@ import authRoute from './routes/auth.js';
 import usersRoute from './routes/users.js';
 import roomsRoute from './routes/rooms.js';
 import hotelsRoute from './routes/hotels.js';
+import NotFoundError from './errors/notFound.js';
+import globalErrorHandler from './middlewares/errorHandler.js';
 
 // start express app
 const app = express();
@@ -48,5 +50,11 @@ app.use('/api/v1/auth', authRoute);
 app.use('/api/v1/users', usersRoute);
 app.use('/api/v1/rooms', roomsRoute);
 app.use('/api/v1/hotels', hotelsRoute);
+
+app.all('*', (req, res, next) => {
+  next(new NotFoundError(`Can't find ${req.originalUrl} on this server`));
+});
+
+app.use(globalErrorHandler);
 
 export default app;
