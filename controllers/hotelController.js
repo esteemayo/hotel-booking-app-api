@@ -78,4 +78,19 @@ export const updateHotel = asyncHandler(async (req, res, next) => {
   });
 });
 
-export const deleteHotel = asyncHandler(async (req, res, next) => { });
+export const deleteHotel = asyncHandler(async (req, res, next) => {
+  const { id: hotelId } = req;
+
+  const hotel = await Hotel.findByIdAndDelete(hotelId);
+
+  if (!hotel) {
+    return next(
+      new NotFoundError(`There is no hotel found with the given ID → ${hotelId}`)
+    );
+  }
+
+  res.status(StatusCodes.NO_CONTENT).json({
+    status: 'success',
+    hotel: null,
+  });
+});
