@@ -67,10 +67,14 @@ export const updateHotel = asyncHandler(async (req, res, next) => {
 
   if (name) slug = slugify(name, { lower: true });
 
-  const hotel = await Hotel.findByIdAndUpdate(hotelId, { $set: { ...req.body } }, {
-    new: true,
-    runValidators: true,
-  });
+  const hotel = await Hotel.findByIdAndUpdate(
+    hotelId,
+    { $set: { ...req.body } },
+    {
+      new: true,
+      runValidators: true,
+    }
+  );
 
   if (!hotel) {
     return next(
