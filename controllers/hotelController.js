@@ -15,7 +15,22 @@ export const getHotels = asyncHandler(async (req, res, next) => {
   })
 });
 
-export const getHotelById = asyncHandler(async (req, res, next) => { });
+export const getHotelById = asyncHandler(async (req, res, next) => {
+  const { id: hotelId } = req;
+
+  const hotel = await Hotel.findById(hotelId);
+
+  if (!hotel) {
+    return next(
+      new NotFoundError(`There is no hotel with the given ID → ${hotelId}`)
+    );
+  }
+
+  res.status(StatusCodes.OK).json({
+    status: 'success',
+    hotel,
+  });
+});
 
 export const getHotelBySlug = asyncHandler(async (req, res, next) => { });
 
