@@ -12,8 +12,8 @@
     "blowitallaway": "node ./dev-data/data/import-dev-data --remove"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Emmanuel Adebayo",
+  "license": "MIT",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "colors": "^1.4.0",
