@@ -62,6 +62,18 @@ const hotelSchema = new mongoose.Schema({
   toObject: { virtuals: true },
 });
 
+hotelSchema.pre('save', async function (next) {
+  if (!this.isModified('name')) return next();
+  this.slug = slugify(this.name, { lower: true });
+
+  const slugRegEx = new RegExp(`^(${this.slug})((-[0-9]*$)?)$`, 'i');
+  const hotelWithSlug = await this.constructor.find({ slug: slugRegEx });
+
+  if (hotelWithSlug.length) {
+    this.slug = `${this.slug}-${hotelWithSlug.length + 1}`;
+  }
+});
+
 const Hotel = mongoose.models.Hotel || mongoose.model('Hotel', hotelSchema);
 
 export default Hotel;
