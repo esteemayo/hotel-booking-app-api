@@ -9,7 +9,14 @@ export const getHotelById = asyncHandler(async (req, res, next) => { });
 
 export const getHotelBySlug = asyncHandler(async (req, res, next) => { });
 
-export const createHotel = asyncHandler(async (req, res, next) => { });
+export const createHotel = asyncHandler(async (req, res, next) => {
+  const hotel = await Hotel.create({ ...req.body });
+
+  res.status(StatusCodes.CREATED).json({
+    status: 'success',
+    hotel,
+  });
+});
 
 export const updateHotel = asyncHandler(async (req, res, next) => { });
 
