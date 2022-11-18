@@ -16,7 +16,7 @@ export const getHotels = asyncHandler(async (req, res, next) => {
 });
 
 export const getHotelById = asyncHandler(async (req, res, next) => {
-  const { id: hotelId } = req;
+  const { id: hotelId } = req.params;
 
   const hotel = await Hotel.findById(hotelId);
 
@@ -33,7 +33,7 @@ export const getHotelById = asyncHandler(async (req, res, next) => {
 });
 
 export const getHotelBySlug = asyncHandler(async (req, res, next) => {
-  const { slug } = req;
+  const { slug } = req.params;
 
   const hotel = await Hotel.findOne({ slug });
 
@@ -59,7 +59,7 @@ export const createHotel = asyncHandler(async (req, res, next) => {
 });
 
 export const updateHotel = asyncHandler(async (req, res, next) => {
-  const { id: hotelId } = req;
+  const { id: hotelId } = req.params;
 
   const hotel = await Hotel.findByIdAndUpdate(hotelId, { $set: { ...req.body } }, {
     new: true,
@@ -79,7 +79,7 @@ export const updateHotel = asyncHandler(async (req, res, next) => {
 });
 
 export const deleteHotel = asyncHandler(async (req, res, next) => {
-  const { id: hotelId } = req;
+  const { id: hotelId } = req.params;
 
   const hotel = await Hotel.findByIdAndDelete(hotelId);
 
