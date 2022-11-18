@@ -22,7 +22,7 @@ export const getHotelById = asyncHandler(async (req, res, next) => {
 
   if (!hotel) {
     return next(
-      new NotFoundError(`There is no hotel with the given ID → ${hotelId}`)
+      new NotFoundError(`There is no hotel found with the given ID → ${hotelId}`)
     );
   }
 
@@ -39,7 +39,7 @@ export const getHotelBySlug = asyncHandler(async (req, res, next) => {
 
   if (!hotel) {
     return next(
-      new NotFoundError(`There is no hotel with the given SLUG → ${slug}`)
+      new NotFoundError(`There is no hotel found with the given SLUG → ${slug}`)
     );
   }
 
