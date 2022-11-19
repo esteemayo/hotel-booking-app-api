@@ -1,5 +1,6 @@
 import express from 'express';
 import morgan from 'morgan';
+import cookieParser from 'cookie-parser';
 
 // requireing routes
 import authRoute from './routes/auth.js';
@@ -30,6 +31,7 @@ if (app.get('env') === 'development') {
 app.use(express.json({ limit: '10kb' }));
 
 // cookie parser middleware
+app.use(cookieParser(process.env.COOKIE_SECRET));
 
 // data sanitization against NoSQL query injection
 
