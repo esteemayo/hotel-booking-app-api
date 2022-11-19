@@ -1,6 +1,9 @@
 import express from 'express';
 import morgan from 'morgan';
 import cookieParser from 'cookie-parser';
+import dotenv from 'dotenv';
+
+dotenv.config({ path: './config.env' });
 
 // requireing routes
 import authRoute from './routes/auth.js';
@@ -32,6 +35,8 @@ app.use(express.json({ limit: '10kb' }));
 
 // cookie parser middleware
 app.use(cookieParser(process.env.COOKIE_SECRET));
+console.log(process.env.COOKIE_SECRET);
+console.log(process.env.DATABASE_LOCAL)
 
 // data sanitization against NoSQL query injection
 
