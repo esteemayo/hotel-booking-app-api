@@ -4,6 +4,7 @@ import asyncHandler from 'express-async-handler';
 import User from '../models/User.js';
 import BadRequestError from '../errors/badRequest.js';
 import UnauthenticatedError from '../errors/unauthenticated.js';
+import createSendToken from '../utils/createSendToken.js';
 
 export const login = asyncHandler(async (req, res, next) => {
   const { username, password } = req.body;
@@ -17,8 +18,5 @@ export const login = asyncHandler(async (req, res, next) => {
     return next(new UnauthenticatedError('Incorrect username or password'));
   }
 
-  res.status(StatusCodes.OK).json({
-    status: 'success',
-    user,
-  });
+  createSendToken(user, StatusCodes.OK, req, res);
 });
