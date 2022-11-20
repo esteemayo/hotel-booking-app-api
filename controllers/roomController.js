@@ -5,7 +5,16 @@ import Room from '../models/Room.js';
 import Hotel from '../models/Hotel.js';
 import NotFoundError from '../errors/notFound.js';
 
-export const getRooms = asyncHandler(async (req, res, next) => { });
+export const getRooms = asyncHandler(async (req, res, next) => {
+  const rooms = await Room.find();
+
+  res.status(StatusCodes.OK).json({
+    status: 'success',
+    requestedAt: req.requestTime,
+    results: rooms.length,
+    rooms,
+  });
+});
 
 export const getRoom = asyncHandler(async (req, res, next) => { });
 
