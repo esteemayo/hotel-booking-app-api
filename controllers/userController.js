@@ -4,6 +4,7 @@ import asyncHandler from 'express-async-handler';
 
 import User from '../models/User.js';
 import NotFoundError from '../errors/notFound.js';
+import BadRequestError from '../errors/badRequest.js';
 import createSendToken from '../utils/createSendToken.js';
 
 export const register = asyncHandler(async (req, res, next) => {
@@ -66,6 +67,32 @@ export const updateUser = asyncHandler(async (req, res, next) => {
   });
 });
 
+export const updateMe = asyncHandler(async (req, res, next) => {
+  const { password, confirmPassword } = req.body;
+
+  if (password || confirmPassword) {
+    return next(
+      new BadRequestError(
+        `This route is not for password updates. Please use update ${req.protocol
+        }://${req.get('host')}/api/v1/auth/update-my-password`
+      )
+    );
+  }
+
+  const filterBody = _.pick(req.body, ['name', 'email', 'username']);
+
+  const updatedUser = await User.findByIdAndUpdate(
+    req.user.id,
+    { $set: { ...filterBody } },
+    {
+      new: true,
+      runValidators: true,
+    }
+  );
+
+  createSendToken(updatedUser, StatusCodes.OK, req, res);
+});
+
 export const deleteUser = asyncHandler(async (req, res, next) => {
   const { id: userId } = req.params;
 
@@ -82,6 +109,20 @@ export const deleteUser = asyncHandler(async (req, res, next) => {
     user: null,
   });
 });
+
+export const deleteMe = asyncHandler(async (req, res, next) => {
+  await User.findByIdAndUpdate(req.user.id, { active: false });
+
+  res.status(StatusCodes.NO_CONTENT).json({
+    status: 'success',
+    user: null,
+  });
+});
+
+export const getMe = (req, res) => {
+  req.user.id = req.params.id;
+  next();
+};
 
 export const createUser = (req, res) => {
   res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({
