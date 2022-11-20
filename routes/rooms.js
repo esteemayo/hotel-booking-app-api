@@ -5,14 +5,14 @@ import * as roomController from '../controllers/roomController.js';
 
 const router = express.Router();
 
-router
-  .route('/')
-  .get(roomController.getRooms)
-  .post(
-    authMiddiware.protect,
-    authMiddiware.restrictTo('admin'),
-    roomController.createRoom
-  );
+router.get('/', roomController.getRooms);
+
+router.post(
+  '/:hotelId',
+  authMiddiware.protect,
+  authMiddiware.restrictTo('admin'),
+  roomController.createRoom
+);
 
 router
   .route('/:id')
