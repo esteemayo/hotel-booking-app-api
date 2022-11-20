@@ -123,8 +123,8 @@ export const deleteMe = asyncHandler(async (req, res, next) => {
   });
 });
 
-export const getMe = (req, res) => {
-  req.user.id = req.params.id;
+export const getMe = (req, res, next) => {
+  req.params.id = req.user.id;
   next();
 };
 
