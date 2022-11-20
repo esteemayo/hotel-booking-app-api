@@ -45,6 +45,18 @@ const protect = asyncHandler(async (req, res, next) => {
   next();
 });
 
+const restrictTo =
+  (...roles) => {
+    (req, res, next) => {
+      if (!roles.includes(req.user.role)) {
+        return next(
+          new ForbiddenError('You don not have permission to perform this action')
+        );
+      }
+      next();
+    }
+  };
+
 const verifyUser = (req, res, next) => {
   if (req.user.id === req.params.id || req.user.role === 'admin') {
     return next();
@@ -54,6 +66,7 @@ const verifyUser = (req, res, next) => {
 
 const authMiddiware = {
   protect,
+  restrictTo,
   verifyUser,
 };
 
