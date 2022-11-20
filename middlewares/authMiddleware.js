@@ -6,7 +6,7 @@ import User from '../models/User.js';
 import ForbiddenError from '../errors/forbidden.js';
 import UnauthenticatedError from '../errors/unauthenticated.js';
 
-export default asyncHandler(async (req, res, next) => {
+const protect = asyncHandler(async (req, res, next) => {
   let token;
   const authHeader = req.headers.authorization;
 
