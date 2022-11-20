@@ -6,7 +6,12 @@ import User from '../models/User.js';
 import UnauthenticatedError from '../errors/unauthenticated.js';
 
 export default asyncHandler(async (req, res, next) => {
-  const token = req.cookies.access_token;
+  let token;
+  const authHeader = req.headers.authorization;
+
+  if (authHeader && authHeader.startsWith('Bearer')) {
+    token = authHeader.split(' ')[1];
+  }
 
   if (!token) {
     return next(
