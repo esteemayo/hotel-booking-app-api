@@ -16,7 +16,11 @@ export const register = asyncHandler(async (req, res, next) => {
 });
 
 export const getUsers = asyncHandler(async (req, res, next) => {
-  const user = await User.find();
+  const query = req.query.new;
+
+  const user = query
+    ? await User.find().sort('-_id').limit(5)
+    : await User.find().sort('-createdAt');
 
   res.status(StatusCodes.OK).json({
     status: 'success',
