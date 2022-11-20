@@ -35,8 +35,6 @@ app.use(express.json({ limit: '10kb' }));
 
 // cookie parser middleware
 app.use(cookieParser(process.env.COOKIE_SECRET));
-console.log(process.env.COOKIE_SECRET);
-console.log(process.env.DATABASE_LOCAL)
 
 // data sanitization against NoSQL query injection
 
