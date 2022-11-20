@@ -9,6 +9,12 @@ router.post('/register', userController.register);
 
 router.use(authMiddleware.protect);
 
+router.get('/me', userController.getMe, userController.getUser);
+
+router.patch('/update-me', userController.updateMe);
+
+router.delete('/delete-me', userController.deleteMe);
+
 router
   .route('/')
   .get(authMiddleware.restrictTo('admin'), userController.getUsers)
