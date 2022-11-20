@@ -16,7 +16,22 @@ export const getRooms = asyncHandler(async (req, res, next) => {
   });
 });
 
-export const getRoom = asyncHandler(async (req, res, next) => { });
+export const getRoom = asyncHandler(async (req, res, next) => {
+  const { id: roomId } = req.params;
+
+  const room = await Room.findById(roomId);
+
+  if (!room) {
+    return next(
+      new NotFoundError(`There is no room found with the given ID → ${roomId}`)
+    );
+  }
+
+  res.status(StatusCodes.OK).json({
+    status: 'success',
+    room,
+  });
+});
 
 export const createRoom = asyncHandler(async (req, res, next) => {
   const { hotelId } = req.params;
