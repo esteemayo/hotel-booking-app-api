@@ -46,7 +46,7 @@ const protect = asyncHandler(async (req, res, next) => {
 });
 
 const restrictTo =
-  (...roles) => {
+  (...roles) =>
     (req, res, next) => {
       if (!roles.includes(req.user.role)) {
         return next(
@@ -54,8 +54,7 @@ const restrictTo =
         );
       }
       next();
-    }
-  };
+    };
 
 const verifyUser = (req, res, next) => {
   if (req.user.id === req.params.id || req.user.role === 'admin') {
