@@ -44,3 +44,17 @@ const protect = asyncHandler(async (req, res, next) => {
   req.user = currentUser;
   next();
 });
+
+const verifyUser = (req, res, next) => {
+  if (req.user.id === req.params.id || req.user.role === 'admin') {
+    return next();
+  }
+  return next(new ForbiddenError('You are not authorized'));
+};
+
+const authMiddiware = {
+  protect,
+  verifyUser,
+};
+
+export default authMiddiware;
