@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import { StatusCodes } from 'http-status-codes';
 import asyncHandler from 'express-async-handler';
 
@@ -65,7 +66,7 @@ export const updateUser = asyncHandler(async (req, res, next) => {
   });
 });
 
-export const deleteuser = asyncHandler(async (req, res, next) => {
+export const deleteUser = asyncHandler(async (req, res, next) => {
   const { id: userId } = req.params;
 
   const user = await User.findByIdAndDelete(userId);
