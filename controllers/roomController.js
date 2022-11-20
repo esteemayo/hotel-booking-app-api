@@ -71,4 +71,19 @@ export const updateRoom = asyncHandler(async (req, res, next) => {
   });
 });
 
-export const deleteRoom = asyncHandler(async (req, res, next) => { });
+export const deleteRoom = asyncHandler(async (req, res, next) => {
+  const { id: roomId } = req.params;
+
+  const room = await Room.findByIdAndDelete(roomId);
+
+  if (!room) {
+    return next(
+      new NotFoundError(`There is no room found with the given ID → ${roomId}`)
+    );
+  }
+
+  res.status(StatusCodes.NO_CONTENT).json({
+    status: 'success',
+    room: null,
+  });
+});
