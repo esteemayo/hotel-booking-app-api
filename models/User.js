@@ -122,6 +122,9 @@ userSchema.methods.createPasswordResetToken = function () {
 };
 
 userSchema.methods.getUserStat = async function () {
+  const now = new Date();
+  const lastMonth = new Date(now.setMonth(now.getMonth() - 1));
+
   const stats = await this.aggregate([
     {
       $match: { createdAt: { $gte: lastMonth } },
