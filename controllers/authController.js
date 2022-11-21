@@ -113,4 +113,18 @@ export const resetPassword = asyncHandler(async (req, res, next) => {
   createSendToken(user, StatusCodes.OK, req, res);
 });
 
-export const updatePassword = asyncHandler(async (req, res, next) => { });
+export const updatePassword = asyncHandler(async (req, res, next) => {
+  const { password, confirmPassword, currentPassword } = req.body;
+
+  const user = await User.findById(req.user.id).select('+password');
+
+  if (!(await user.comparePassword(currentPassword))) {
+    return next(new UnauthenticatedError('Your current password is incorrect'));
+  }
+
+  user.password = password;
+  user.confirmPassword = confirmPassword;
+  await user.save();
+
+  createSendToken(user, StatusCodes.OK, req, res);
+});
