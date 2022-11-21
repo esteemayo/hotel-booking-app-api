@@ -72,9 +72,15 @@ export const updateRoom = asyncHandler(async (req, res, next) => {
 });
 
 export const deleteRoom = asyncHandler(async (req, res, next) => {
-  const { id: roomId } = req.params;
+  const {
+    hotelId,
+    id: roomId,
+  } = req.params;
 
   const room = await Room.findByIdAndDelete(roomId);
+  await Hotel.findByIdAndUpdate(hotelId, {
+    $pull: { rooms: roomId },
+  });
 
   if (!room) {
     return next(
