@@ -121,7 +121,7 @@ userSchema.methods.createPasswordResetToken = function () {
   return resetToken;
 };
 
-userSchema.methods.getUserStat = async function () {
+userSchema.methods.getUserStats = async function () {
   const now = new Date();
   const lastMonth = new Date(now.setMonth(now.getMonth() - 1));
 
