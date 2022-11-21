@@ -1,0 +1,3 @@
+# Hotel Booking/Reservation Application
+
+Built with modern technologies: express, mongoose, jsonwebtoken, bcryptjs and more...
