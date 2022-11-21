@@ -29,6 +29,10 @@ export const countByCity = asyncHandler(async (req, res, next) => {
   });
 });
 
+export const countByType = asyncHandler(async (req, res, next) => {
+
+});
+
 export const getHotelById = asyncHandler(async (req, res, next) => {
   const { id: hotelId } = req.params;
 
