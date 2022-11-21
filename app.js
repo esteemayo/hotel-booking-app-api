@@ -8,6 +8,7 @@ import rateLimit from 'express-rate-limit';
 import mongoSanitize from 'express-mongo-sanitize';
 import xss from 'xss-clean';
 import hpp from 'hpp';
+import compression from 'compression';
 
 dotenv.config({ path: './config.env' });
 
@@ -62,6 +63,7 @@ app.use(xss());
 app.use(hpp());
 
 // compression middleware
+app.use(compression());
 
 // test middleware
 app.use((req, res, next) => {
