@@ -30,6 +30,33 @@ export const getUsers = asyncHandler(async (req, res, next) => {
   })
 });
 
+export const getUserStats = asyncHandler(async (req, res, next) => {
+  const now = new Date();
+  const lastMonth = new Date(now.setMonth(now.getMonth() - 1));
+
+  const stats = await User.aggregate([
+    {
+      $match: { createdAt: { $gte: lastMonth } },
+    },
+    {
+      $project: {
+        month: { $month: '$createdAt' },
+      },
+    },
+    {
+      $group: {
+        _id: '$month',
+        total: { $sum: 1 },
+      },
+    },
+  ]);
+
+  res.status(StatusCodes.OK).json({
+    status: 'success',
+    stats,
+  });
+});
+
 export const getUser = asyncHandler(async (req, res, next) => {
   const { id: userId } = req.params;
 
