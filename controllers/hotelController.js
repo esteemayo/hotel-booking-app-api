@@ -3,43 +3,17 @@ import { StatusCodes } from 'http-status-codes';
 import asyncHandler from 'express-async-handler';
 
 import Hotel from '../models/Hotel.js';
+import APIFeatures from '../utils/apiFeatures.js';
 import NotFoundError from '../errors/notFound.js';
 
 export const getHotels = asyncHandler(async (req, res, next) => {
-  const queryObj = { ...req.query };
-  const excludedFields = ['page', 'sort', 'limit', 'fields'];
-  excludedFields.forEach((item) => delete queryObj[item]);
+  const features = new APIFeatures(Hotel.find(), req.query)
+    .filter()
+    .sort()
+    .limitFields()
+    .paginate();
 
-  console.log(queryObj);
-
-  let queryStr = JSON.stringify(queryObj);
-  queryStr = queryStr.replace(/\b(gte|gt|lte|lt)\b/, (match) => `$${match}`);
-
-  let query = Hotel.find(JSON.parse(queryStr));
-
-  if (req.query.sort) {
-    const sortBy = req.query.sort.split(',').join(' ');
-    query = query.sort(sortBy);
-  } else {
-    query = query.sort('-createdAt');
-  }
-
-  if (req.query.fields) {
-    const fields = req.query.fields.split(',').join(' ');
-    query = query.select(fields);
-  } else {
-    query = query.select('-__v');
-  }
-
-  const page = +req.query.page || 1;
-  const limit = +req.query.limit || 100;
-  const skip = (page - 1) * limit;
-
-  if (req.query.page) {
-    query = query.skip(skip).limit(limit);
-  }
-
-  const hotels = await query;
+  const hotels = await features.query;
 
   res.status(StatusCodes.OK).json({
     status: 'success',
