@@ -12,7 +12,7 @@ import compression from 'compression';
 
 dotenv.config({ path: './config.env' });
 
-// requireing routes
+// requiring routes
 import authRoute from './routes/auth.js';
 import usersRoute from './routes/users.js';
 import roomsRoute from './routes/rooms.js';
