@@ -5,6 +5,7 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import helmet from 'helmet';
 import rateLimit from 'express-rate-limit';
+import mongoSanitize from 'express-mongo-sanitize';
 
 dotenv.config({ path: './config.env' });
 
@@ -50,6 +51,7 @@ app.use(express.json({ limit: '10kb' }));
 app.use(cookieParser(process.env.COOKIE_SECRET));
 
 // data sanitization against NoSQL query injection
+app.use(mongoSanitize());
 
 // data sanitization against XSS
 
