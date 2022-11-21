@@ -21,11 +21,13 @@ router
     authMiddiware.protect,
     authMiddiware.restrictTo('admin'),
     roomController.updateRoom
-  )
-  .delete(
-    authMiddiware.protect,
-    authMiddiware.restrictTo('admin'),
-    roomController.deleteRoom
   );
+
+router.delete(
+  '/:id/:hotelId',
+  authMiddiware.protect,
+  authMiddiware.restrictTo('admin'),
+  roomController.deleteRoom
+);
 
 export default router;
