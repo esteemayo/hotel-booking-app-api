@@ -43,11 +43,14 @@ const getOneById = (Model, popOptions) =>
     });
   });
 
-const getOneBySlug = (Model) =>
+const getOneBySlug = (Model, popOptions) =>
   asyncHandler(async (req, res, next) => {
     const { slug } = req.params;
 
-    const doc = await Model.findOne({ slug });
+    let query = Model.findOne({ slug });
+    if (popOptions) query = query.populate(popOptions);
+
+    const doc = await query;
 
     if (!doc) {
       return next(
