@@ -90,7 +90,7 @@ userSchema.methods.comparePassword = async function (candidatePassword) {
 };
 
 userSchema.methods.generateAuthToken = function () {
-  return jwt.sign({ id: this._id, role: this.role }, process.env.JWT_SECRET, {
+  const token = jwt.sign({ id: this._id, role: this.role }, process.env.JWT_SECRET, {
     expiresIn: process.env.JWT_EXPIRES_IN,
   });
 
@@ -119,6 +119,27 @@ userSchema.methods.createPasswordResetToken = function () {
   this.resetPasswordExpires = Date.now() + 10 * 60 * 1000;
 
   return resetToken;
+};
+
+userSchema.methods.getUserStat = async function () {
+  const stats = await this.aggregate([
+    {
+      $match: { createdAt: { $gte: lastMonth } },
+    },
+    {
+      $project: {
+        month: { $month: '$createdAt' },
+      },
+    },
+    {
+      $group: {
+        _id: '$month',
+        total: { $sum: 1 },
+      },
+    },
+  ]);
+
+  return stats;
 };
 
 const User = mongoose.models.User || mongoose.model('User', userSchema);
