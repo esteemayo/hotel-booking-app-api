@@ -4,6 +4,7 @@ import cookieParser from 'cookie-parser';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import helmet from 'helmet';
+import rateLimit from 'express-rate-limit';
 
 dotenv.config({ path: './config.env' });
 
@@ -34,6 +35,13 @@ if (app.get('env') === 'development') {
 }
 
 // limit request from same api
+const limiter = rateLimit({
+  max: 100,
+  windowMs: 15 * 60 * 1000,
+  message: 'Too many request from this IP, Please try again in 15 minutes!',
+});
+
+app.use('/api', limiter);
 
 // body Parser, reading data from body into req.body
 app.use(express.json({ limit: '10kb' }));
