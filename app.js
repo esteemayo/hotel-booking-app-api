@@ -3,6 +3,7 @@ import morgan from 'morgan';
 import cookieParser from 'cookie-parser';
 import dotenv from 'dotenv';
 import cors from 'cors';
+import helmet from 'helmet';
 
 dotenv.config({ path: './config.env' });
 
@@ -25,6 +26,7 @@ app.use(cors());
 app.options('*', cors());
 
 // set security HTTP headers
+app.use(helmet());
 
 // development logging
 if (app.get('env') === 'development') {
