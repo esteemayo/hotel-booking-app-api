@@ -2,6 +2,7 @@ import express from 'express';
 import morgan from 'morgan';
 import cookieParser from 'cookie-parser';
 import dotenv from 'dotenv';
+import cors from 'cors';
 
 dotenv.config({ path: './config.env' });
 
@@ -18,8 +19,10 @@ const app = express();
 
 // global middlewares
 // implement CORS
+app.use(cors());
 
 // Access-Control-Allow-Origin
+app.options('*', cors());
 
 // set security HTTP headers
 
