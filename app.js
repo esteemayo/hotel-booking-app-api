@@ -42,7 +42,7 @@ if (app.get('env') === 'development') {
 const limiter = rateLimit({
   max: 100,
   windowMs: 15 * 60 * 1000,
-  message: 'Too many request from this IP, Please try again in 15 minutes!',
+  message: 'Too many requests from this IP, Please try again in 15 minutes!',
 });
 
 app.use('/api', limiter);
