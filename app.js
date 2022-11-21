@@ -6,6 +6,7 @@ import cors from 'cors';
 import helmet from 'helmet';
 import rateLimit from 'express-rate-limit';
 import mongoSanitize from 'express-mongo-sanitize';
+import xss from 'xss-clean';
 
 dotenv.config({ path: './config.env' });
 
@@ -54,6 +55,7 @@ app.use(cookieParser(process.env.COOKIE_SECRET));
 app.use(mongoSanitize());
 
 // data sanitization against XSS
+app.use(xss());
 
 // prevent parameter pollution
 
