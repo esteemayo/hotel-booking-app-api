@@ -7,6 +7,7 @@ import helmet from 'helmet';
 import rateLimit from 'express-rate-limit';
 import mongoSanitize from 'express-mongo-sanitize';
 import xss from 'xss-clean';
+import hpp from 'hpp';
 
 dotenv.config({ path: './config.env' });
 
@@ -58,6 +59,7 @@ app.use(mongoSanitize());
 app.use(xss());
 
 // prevent parameter pollution
+app.use(hpp());
 
 // compression middleware
 
