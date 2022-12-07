@@ -10,7 +10,7 @@ export const getHotels = asyncHandler(async (req, res, next) => {
 
   const hotels = await Hotel.find({
     ...rest,
-    cheapestPrice: { $gt: min || 1, $lt: max || 999 }
+    cheapestPrice: { $gte: min || 1, $lte: max || 999 }
   })
     .limit(limit)
     .sort('-createdAt');
