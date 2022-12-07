@@ -3,17 +3,17 @@ import { StatusCodes } from 'http-status-codes';
 import asyncHandler from 'express-async-handler';
 
 import Hotel from '../models/Hotel.js';
-import APIFeatures from '../utils/apiFeatures.js';
 import NotFoundError from '../errors/notFound.js';
 
 export const getHotels = asyncHandler(async (req, res, next) => {
-  const features = new APIFeatures(Hotel.find(), req.query)
-    .filter()
-    .sort()
-    .limitFields()
-    .paginate();
+  const { min, max, limit, ...rest } = req.query;
 
-  const hotels = await features.query;
+  const hotels = await Hotel.find({
+    ...rest,
+    cheapestPrice: { $gt: min || 1, $lt: max || 999 }
+  })
+    .limit(limit)
+    .sort('-createdAt');
 
   res.status(StatusCodes.OK).json({
     status: 'success',
