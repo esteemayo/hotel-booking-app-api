@@ -2,6 +2,7 @@ import slugify from 'slugify';
 import { StatusCodes } from 'http-status-codes';
 import asyncHandler from 'express-async-handler';
 
+import Room from '../models/Room.js';
 import Hotel from '../models/Hotel.js';
 import NotFoundError from '../errors/notFound.js';
 
@@ -50,6 +51,20 @@ export const countByType = asyncHandler(async (req, res, next) => {
     { type: 'villa', count: villaCount },
     { type: 'cabin', count: cabinCount },
   ]);
+});
+
+export const getHotelRooms = asyncHandler(async (req, res, next) => {
+  const { id: hotelId } = req.params;
+
+  const hotel = await Hotel.findById(hotelId);
+  const lists = await Promise.all(hotel.rooms.map((room) => {
+    return Room.findById(room);
+  }));
+
+  res.status(StatusCodes.OK).json({
+    status: 'success',
+    lists,
+  });
 });
 
 export const getHotelById = asyncHandler(async (req, res, next) => {
