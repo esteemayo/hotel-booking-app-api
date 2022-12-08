@@ -9,6 +9,8 @@ router.get('/count-by-city', hotelController.countByCity);
 
 router.get('/count-by-type', hotelController.countByType);
 
+router.get('/room/:id', hotelController.getHotelRooms);
+
 router.get('/details/:slug', hotelController.getHotelBySlug);
 
 router
