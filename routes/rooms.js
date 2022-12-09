@@ -14,6 +14,8 @@ router.post(
   roomController.createRoom
 );
 
+router.patch('/availability/:id', roomController.updateRoomAvailability);
+
 router
   .route('/:id')
   .get(roomController.getRoom)
