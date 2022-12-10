@@ -28,7 +28,7 @@ export const countByCity = asyncHandler(async (req, res, next) => {
   const cities = req.query.cities.split(',');
 
   const list = await Promise.all(cities.map((city) => {
-    return Hotel.countDocuments({ city })
+    return Hotel.countDocuments({ city });
   }));
 
   res.status(StatusCodes.OK).json({
