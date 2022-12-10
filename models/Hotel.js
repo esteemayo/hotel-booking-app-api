@@ -42,8 +42,8 @@ const hotelSchema = new mongoose.Schema({
   },
   rating: {
     type: Number,
-    min: [0, 'Rating must be above 0'],
-    max: [5, 'Rating must be below 5'],
+    min: [1, 'Rating must be above 1.0'],
+    max: [5, 'Rating must be below 5.0'],
   },
   rooms: {
     type: [String],
