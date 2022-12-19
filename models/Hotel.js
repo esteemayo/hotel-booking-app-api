@@ -62,7 +62,7 @@ const hotelSchema = new mongoose.Schema({
   toObject: { virtuals: true },
 });
 
-hotelSchema.index({ city, cheapestPrice });
+hotelSchema.index({ city: 1, cheapestPrice: 1 });
 hotelSchema.index({ slug: 1 });
 
 hotelSchema.pre('save', async function (next) {
