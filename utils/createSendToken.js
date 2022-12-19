@@ -13,10 +13,14 @@ const createSendToken = (user, status, req, res) => {
 
   const { password, role, ...rest } = user._doc;
 
-  res.status(status).json({
-    status: 'success',
+  const details = {
     token,
     ...rest,
+  };
+
+  res.status(status).json({
+    status: 'success',
+    details,
     role,
   });
 };
