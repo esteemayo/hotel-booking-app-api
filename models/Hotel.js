@@ -62,6 +62,9 @@ const hotelSchema = new mongoose.Schema({
   toObject: { virtuals: true },
 });
 
+hotelSchema.index({ city, cheapestPrice });
+hotelSchema.index({ slug: 1 });
+
 hotelSchema.pre('save', async function (next) {
   if (!this.isModified('name')) return next();
   this.slug = slugify(this.name, { lower: true });
