@@ -38,6 +38,10 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: [true, 'Please tell us your city'],
   },
+  phone: {
+    type: String,
+    required: [true, 'Please enter your phone number'],
+  },
   password: {
     type: String,
     required: [true, 'Please provide your password'],
