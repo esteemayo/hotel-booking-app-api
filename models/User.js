@@ -27,6 +27,10 @@ const userSchema = new mongoose.Schema({
       'Please enter a valid email address',
     ],
   },
+  country: {
+    type: String,
+    required: [true, 'Please tell us your country'],
+  },
   password: {
     type: String,
     required: [true, 'Please provide your password'],
