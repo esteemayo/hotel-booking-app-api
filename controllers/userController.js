@@ -18,7 +18,7 @@ export const register = asyncHandler(async (req, res, next) => {
 export const getUsers = asyncHandler(async (req, res, next) => {
   const query = req.query.new;
 
-  const user = query
+  const users = query
     ? await User.find().sort('-_id').limit(5)
     : await User.find().sort('-createdAt');
 
@@ -26,7 +26,7 @@ export const getUsers = asyncHandler(async (req, res, next) => {
     status: 'success',
     requestedAt: req.requestTime,
     results: user.length,
-    user,
+    users,
   })
 });
 
