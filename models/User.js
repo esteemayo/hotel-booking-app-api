@@ -31,6 +31,9 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: [true, 'Please tell us your country'],
   },
+  img: {
+    type: String,
+  },
   password: {
     type: String,
     required: [true, 'Please provide your password'],
