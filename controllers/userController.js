@@ -92,7 +92,7 @@ export const updateMe = asyncHandler(async (req, res, next) => {
     );
   }
 
-  const filterBody = _.pick(req.body, ['img', 'name', 'email', 'username']);
+  const filterBody = _.pick(req.body, ['img', 'city', 'name', 'email', 'phone', 'country', 'username']);
 
   const updatedUser = await User.findByIdAndUpdate(
     req.user.id,
