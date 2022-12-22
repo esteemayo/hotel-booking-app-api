@@ -63,10 +63,10 @@ const verifyUser = (req, res, next) => {
   return next(new ForbiddenError('You are not authorized'));
 };
 
-const authMiddiware = {
+const authMiddleware = {
   protect,
   restrictTo,
   verifyUser,
 };
 
-export default authMiddiware;
+export default authMiddleware;
