@@ -1,6 +1,6 @@
 import express from 'express';
 
-import authMiddiware from '../middlewares/authMiddleware.js';
+import authMiddleware from '../middlewares/authMiddleware.js';
 import * as roomController from '../controllers/roomController.js';
 
 const router = express.Router();
@@ -9,8 +9,8 @@ router.get('/', roomController.getRooms);
 
 router.post(
   '/:hotelId',
-  authMiddiware.protect,
-  authMiddiware.restrictTo('admin'),
+  authMiddleware.protect,
+  authMiddleware.restrictTo('admin'),
   roomController.createRoom
 );
 
@@ -20,15 +20,15 @@ router
   .route('/:id')
   .get(roomController.getRoom)
   .patch(
-    authMiddiware.protect,
-    authMiddiware.restrictTo('admin'),
+    authMiddleware.protect,
+    authMiddleware.restrictTo('admin'),
     roomController.updateRoom
   );
 
 router.delete(
   '/:id/:hotelId',
-  authMiddiware.protect,
-  authMiddiware.restrictTo('admin'),
+  authMiddleware.protect,
+  authMiddleware.restrictTo('admin'),
   roomController.deleteRoom
 );
 
