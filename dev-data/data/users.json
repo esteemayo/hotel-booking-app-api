@@ -110,5 +110,19 @@
     "role": "user",
     "createdAt": "2022-12-21T21:24:43.897Z",
     "updatedAt": "2022-12-21T21:24:43.897Z"
+  },
+  {
+    "_id": "63af1f75a1c84edf9dba2981",
+    "name": "Kate Morrison",
+    "username": "kate",
+    "email": "kate@example.com",
+    "country": "USA",
+    "img": "http://res.cloudinary.com/learnhowtocode/image/upload/v1672421240/upload/s72b23zwgq3jkkym9hsf.jpg",
+    "city": "Florida",
+    "phone": "+482851459432",
+    "password": "$2a$12$J7INf.JxIU7/ovPkmBjWe.ReZF3HuZzZmYudLMFtICnOoagkwVpqy",
+    "role": "user",
+    "createdAt": "2022-12-30T17:27:17.820Z",
+    "updatedAt": "2022-12-30T17:27:17.820Z"
   }
 ]
