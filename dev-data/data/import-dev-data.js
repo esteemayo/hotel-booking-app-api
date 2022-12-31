@@ -1,5 +1,6 @@
 import fs from 'fs';
 import dotenv from 'dotenv';
+import 'colors';
 
 import User from '../../models/User.js';
 import Room from '../../models/Room.js';
