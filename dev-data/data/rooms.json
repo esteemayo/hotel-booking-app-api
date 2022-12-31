@@ -284,5 +284,42 @@
     "createdAt": "2022-12-31T15:58:29.774Z",
     "updatedAt": "2022-12-31T15:58:29.774Z",
     "__v": 0
+  },
+  {
+    "_id": "63b05cf8901367bafb576dea",
+    "title": "Queen Bedded Room",
+    "price": 1000,
+    "maxPeople": 2,
+    "desc": "Queen-sized bed, balcony, 1 bathroom",
+    "roomNumbers": [
+      {
+        "number": 901,
+        "unavailableDates": [],
+        "_id": "63b05cf8901367bafb576deb"
+      },
+      {
+        "number": 902,
+        "unavailableDates": [],
+        "_id": "63b05cf8901367bafb576dec"
+      },
+      {
+        "number": 903,
+        "unavailableDates": [],
+        "_id": "63b05cf8901367bafb576ded"
+      },
+      {
+        "number": 904,
+        "unavailableDates": [],
+        "_id": "63b05cf8901367bafb576dee"
+      },
+      {
+        "number": 905,
+        "unavailableDates": [],
+        "_id": "63b05cf8901367bafb576def"
+      }
+    ],
+    "createdAt": "2022-12-31T16:02:00.785Z",
+    "updatedAt": "2022-12-31T16:02:00.785Z",
+    "__v": 0
   }
 ]
