@@ -1,1 +1,39 @@
-[]
+[
+  {
+    "_id": "637ac408eddcbd99d95dcb0e",
+    "title": "Single Room",
+    "price": 450,
+    "maxPeople": 2,
+    "desc": "King size bed, 1 bathroom, balcony",
+    "roomNumbers": [
+      {
+        "number": 101,
+        "unavailableDates": [],
+        "_id": "63b0526e1744b93233d57a33"
+      },
+      {
+        "number": 102,
+        "unavailableDates": [],
+        "_id": "63b0526e1744b93233d57a34"
+      },
+      {
+        "number": 103,
+        "unavailableDates": [],
+        "_id": "63b0526e1744b93233d57a35"
+      },
+      {
+        "number": 104,
+        "unavailableDates": [],
+        "_id": "63b0526e1744b93233d57a36"
+      },
+      {
+        "number": 105,
+        "unavailableDates": [],
+        "_id": "63b0526e1744b93233d57a37"
+      }
+    ],
+    "createdAt": "2022-11-21T00:19:20.877Z",
+    "updatedAt": "2022-12-31T15:17:02.791Z",
+    "__v": 0
+  }
+]
