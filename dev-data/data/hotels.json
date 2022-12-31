@@ -55,5 +55,34 @@
     "updatedAt": "2022-12-31T14:15:37.417Z",
     "slug": "london-marriott-hotel-canary-wharf",
     "__v": 0
+  },
+  {
+    "_id": "63b044be1744b93233d577b9",
+    "name": "Mandarin Oriental Ritz",
+    "type": "hotel",
+    "city": "madrid",
+    "address": "Madrid, Spain",
+    "distance": "1200",
+    "photos": [
+      "http://res.cloudinary.com/learnhowtocode/image/upload/v1672496318/upload/p7epq08e3wnmeceedxzq.jpg",
+      "http://res.cloudinary.com/learnhowtocode/image/upload/v1672496318/upload/dafxgdrwrtncjy4uvhtj.jpg",
+      "http://res.cloudinary.com/learnhowtocode/image/upload/v1672496318/upload/xtnyk0ehyjms79jn15hn.jpg",
+      "http://res.cloudinary.com/learnhowtocode/image/upload/v1672496318/upload/ihx8ws6em8wlrq8semck.jpg",
+      "http://res.cloudinary.com/learnhowtocode/image/upload/v1672496318/upload/iefhlj7antnocncpvnhm.jpg"
+    ],
+    "title": "Maecenas aliquet sed nunc nec facilisis. Sed et velit diam. Ut iaculis lacinia erat, vel eleifend dui rutrum a.",
+    "desc": "Maecenas aliquet sed nunc nec facilisis. Sed et velit diam. Ut iaculis lacinia erat, vel eleifend dui rutrum a. Fusce nisl sem, placerat at ultricies et, consectetur in lorem. Duis ornare, est ac fermentum sollicitudin, ante ligula eleifend nisi, at ultrices metus felis in risus. Donec ut consequat massa. Proin in velit lectus.  Morbi nec sodales est. Nulla fringilla ipsum odio, ac sagittis leo accumsan sed.",
+    "rooms": [
+      "637ac408eddcbd99d95dcb0e",
+      "6391f047087871f57d5e7fb7",
+      "6391f072087871f57d5e7fbd",
+      "6393330605321e683813e34a"
+    ],
+    "cheapestPrice": 300,
+    "featured": false,
+    "createdAt": "2022-12-31T14:18:38.864Z",
+    "updatedAt": "2022-12-31T14:18:38.864Z",
+    "slug": "mandarin-oriental-ritz",
+    "__v": 0
   }
 ]
