@@ -29,6 +29,7 @@ const loadData = async () => {
   }
 };
 
+// remove all data from DB
 const removeData = async () => {
   try {
     await User.deleteMany();
