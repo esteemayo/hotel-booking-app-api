@@ -11,6 +11,7 @@ dotenv.config({ path: './config.env' });
 // database connection
 connectDB();
 
+// read JSON file
 const users = JSON.parse(fs.readFileSync(`${__dirname}/users.json`, 'utf-8'));
 const rooms = JSON.parse(fs.readFileSync(`${__dirname}/rooms.json`, 'utf-8'));
 const hotels = JSON.parse(fs.readFileSync(`${__dirname}/hotels.json`, 'utf-8'));
