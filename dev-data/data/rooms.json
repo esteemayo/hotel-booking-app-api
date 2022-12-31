@@ -120,5 +120,33 @@
     "createdAt": "2022-12-08T14:10:15.164Z",
     "updatedAt": "2022-12-12T17:44:11.721Z",
     "__v": 0
+  },
+  {
+    "_id": "6391f072087871f57d5e7fbd",
+    "title": "Presidential Suite",
+    "price": 300,
+    "maxPeople": 2,
+    "desc": "King size bed, 1 bathroom, balcony",
+    "roomNumbers": [
+      {
+        "number": 301,
+        "unavailableDates": [
+          "2022-12-08T23:00:00.000Z",
+          "2022-12-09T23:00:00.000Z",
+          "2022-12-10T23:00:00.000Z",
+          "2022-12-11T23:00:00.000Z",
+          "2022-12-12T23:00:00.000Z"
+        ],
+        "_id": "6391f072087871f57d5e7fbe"
+      },
+      {
+        "number": 302,
+        "unavailableDates": ["2022-12-08T23:00:00.000Z"],
+        "_id": "6391f072087871f57d5e7fbf"
+      }
+    ],
+    "createdAt": "2022-12-08T14:10:58.170Z",
+    "updatedAt": "2022-12-10T00:18:30.080Z",
+    "__v": 0
   }
 ]
