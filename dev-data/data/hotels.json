@@ -1,1 +1,30 @@
-[]
+[
+  {
+    "_id": "63b0431e1744b93233d5777d",
+    "name": "The Luxury Collection Hotels & Resorts",
+    "type": "resort",
+    "city": "california",
+    "address": "North Carolina, United State",
+    "distance": "1000",
+    "photos": [
+      "http://res.cloudinary.com/learnhowtocode/image/upload/v1672495901/upload/o53vhb1wudrxvmdqphw5.jpg",
+      "http://res.cloudinary.com/learnhowtocode/image/upload/v1672495901/upload/wjnmigynpkpqqnqisxvt.jpg",
+      "http://res.cloudinary.com/learnhowtocode/image/upload/v1672495901/upload/zfks3ltau9qstfafhsn5.jpg",
+      "http://res.cloudinary.com/learnhowtocode/image/upload/v1672495901/upload/lhw3zkuyrnm5nuprgkyc.jpg",
+      "http://res.cloudinary.com/learnhowtocode/image/upload/v1672495901/upload/grpx3mzzs6ecf9isc7oj.jpg"
+    ],
+    "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consequat blandit odio, at euismod magna. Pellentesque laoreet enim dolor, sit amet egestas ipsum mollis quis. Sed nisl est, luctus volutpat consequat at, hendrerit ornare augue. Etiam id viverra eros, id porttitor orci.",
+    "desc": "Sed nisl est, luctus volutpat consequat at, hendrerit ornare augue. Etiam id viverra eros, id porttitor orci. Quisque condimentum varius arcu, nec volutpat arcu imperdiet sed. Fusce gravida ac tellus vel vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus placerat semper risus, quis rhoncus elit dapibus vitae. Nullam vel feugiat eros, nec placerat magna. Sed auctor massa dolor, ut euismod eros rutrum a. Aenean non lacus sollicitudin justo sagittis sagittis.",
+    "rooms": [
+      "6391f047087871f57d5e7fb7",
+      "6391f072087871f57d5e7fbd",
+      "6393330605321e683813e34a"
+    ],
+    "cheapestPrice": 200,
+    "featured": true,
+    "createdAt": "2022-12-31T14:11:42.093Z",
+    "updatedAt": "2022-12-31T14:11:42.093Z",
+    "slug": "the-luxury-collection-hotels-and-resorts",
+    "__v": 0
+  }
+]
