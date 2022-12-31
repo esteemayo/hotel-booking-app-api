@@ -26,5 +26,34 @@
     "updatedAt": "2022-12-31T14:11:42.093Z",
     "slug": "the-luxury-collection-hotels-and-resorts",
     "__v": 0
+  },
+  {
+    "_id": "63b044091744b93233d577a4",
+    "name": "London Marriott Hotel Canary Wharf",
+    "type": "hotel",
+    "city": "london",
+    "address": "London, United Kingdom",
+    "distance": "700",
+    "photos": [
+      "http://res.cloudinary.com/learnhowtocode/image/upload/v1672496136/upload/isbenjj1x8fa8v5zsb0l.jpg",
+      "http://res.cloudinary.com/learnhowtocode/image/upload/v1672496136/upload/tvk1nlhnxzexzv73gqlx.jpg",
+      "http://res.cloudinary.com/learnhowtocode/image/upload/v1672496136/upload/zagpyxngs08g2urgv3kf.jpg",
+      "http://res.cloudinary.com/learnhowtocode/image/upload/v1672496136/upload/bxfwpquau4carnhkzzm9.jpg",
+      "http://res.cloudinary.com/learnhowtocode/image/upload/v1672496136/upload/gngmbvku7lvyfnzdrbde.jpg"
+    ],
+    "title": "Praesent mattis nisl in molestie vestibulum. Sed nulla purus, efficitur sed consequat at, consectetur a sem. Cras molestie elementum nisi, vel bibendum est. Proin vel aliquet tortor.",
+    "desc": "Vivamus id augue nec erat pellentesque tincidunt. Pellentesque euismod fringilla dui, vitae commodo eros placerat venenatis. Quisque magna ex, faucibus non ipsum non, ultricies sagittis purus. Donec vel tellus nec odio tempus placerat a ac justo. Donec consequat volutpat finibus. Duis malesuada tristique velit in rhoncus. Donec eleifend, orci vitae ultricies hendrerit, quam enim tincidunt nunc, in porttitor felis ante ac ante. Donec at sagittis nunc, eget maximus magna. Vestibulum imperdiet lobortis posuere.",
+    "rooms": [
+      "6391f00e087871f57d5e7fb1",
+      "6391f047087871f57d5e7fb7",
+      "6391f072087871f57d5e7fbd",
+      "6393330605321e683813e34a"
+    ],
+    "cheapestPrice": 150,
+    "featured": true,
+    "createdAt": "2022-12-31T14:15:37.417Z",
+    "updatedAt": "2022-12-31T14:15:37.417Z",
+    "slug": "london-marriott-hotel-canary-wharf",
+    "__v": 0
   }
 ]
