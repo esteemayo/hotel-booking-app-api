@@ -8,6 +8,7 @@ import connectDB from '../../config/db.js';
 
 dotenv.config({ path: './config.env' });
 
+// database connection
 connectDB();
 
 const users = JSON.parse(fs.readFileSync(`${__dirname}/users.json`, 'utf-8'));
