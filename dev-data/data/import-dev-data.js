@@ -22,6 +22,9 @@ const loadData = async () => {
     await Room.create(rooms);
     await Hotel.create(hotels);
     await User.create(users, { validateBeforeSave: false });
+    console.log(
+      '👍👍👍👍👍👍👍👍 Data successfully loaded! 👍👍👍👍👍👍👍👍'.green.bold
+    );
     process.exit();
   } catch (err) {
     console.log(err);
@@ -32,11 +35,20 @@ const loadData = async () => {
 // remove all data from DB
 const removeData = async () => {
   try {
+    console.log('😢😢 Goodbye Data...');
     await User.deleteMany();
     await Room.deleteMany();
     await Hotel.deleteMany();
+    console.log(
+      'Data successfully deleted! To load sample data, run\n\n\t npm run sample\n\n'
+        .blue.bold
+    );
     process.exit();
   } catch (err) {
+    console.log(
+      '\n👎👎👎👎👎👎👎👎 Error! The Error info is below but if you are importing sample data make sure to drop the existing database first with.\n\n\t npm run blowitallaway\n\n\n'
+        .red.bold
+    );
     console.log(err);
     process.exit();
   }
