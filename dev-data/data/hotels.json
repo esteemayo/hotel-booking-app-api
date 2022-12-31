@@ -204,5 +204,36 @@
     "updatedAt": "2022-12-31T14:36:28.210Z",
     "slug": "riu-plaza-espana",
     "__v": 0
+  },
+  {
+    "_id": "63b049c51744b93233d5787e",
+    "name": "El Avenida Palace",
+    "type": "resort",
+    "city": "barcelona",
+    "address": "Barcelona, Spain",
+    "distance": "1500",
+    "photos": [
+      "http://res.cloudinary.com/learnhowtocode/image/upload/v1672497605/upload/bktqayaxvbwciuzxkzdp.jpg",
+      "http://res.cloudinary.com/learnhowtocode/image/upload/v1672497605/upload/otq3scuhlls5siyix6jj.jpg",
+      "http://res.cloudinary.com/learnhowtocode/image/upload/v1672497605/upload/qonn0duub8yx7vgyzqvw.jpg",
+      "http://res.cloudinary.com/learnhowtocode/image/upload/v1672497605/upload/kllbyqdxth7lmhntthf0.jpg",
+      "http://res.cloudinary.com/learnhowtocode/image/upload/v1672497605/upload/x1zapbrd3uk45iaztxem.jpg",
+      "http://res.cloudinary.com/learnhowtocode/image/upload/v1672497605/upload/rjiqpgihsgcrd8tddq2d.jpg"
+    ],
+    "title": "Nulla elementum tellus suscipit lorem interdum gravida.",
+    "desc": "Nulla elementum tellus suscipit lorem interdum gravida. Suspendisse iaculis, odio in vulputate tincidunt, quam lacus feugiat neque, eu dictum eros ex at felis. In tempus ultrices imperdiet. Maecenas luctus nisi ac est consequat dictum. Nunc a neque posuere, iaculis quam non, viverra enim. Praesent sit amet quam a sem euismod aliquet. Proin vel tempor orci.  Sed mauris ligula, consequat eu vulputate vel, mollis nec diam. Integer tempor tincidunt dolor vitae luctus. Phasellus sit amet lectus et diam sagittis malesuada. Morbi bibendum auctor leo, vitae porttitor nisl faucibus at. Etiam ac vehicula orci. Curabitur accumsan blandit orci vel suscipit. Etiam rutrum dolor a eros finibus aliquam. Praesent eu neque a nisl imperdiet cursus eget et nulla. Phasellus et enim at dui semper ornare.",
+    "rooms": [
+      "637ac408eddcbd99d95dcb0e",
+      "6391f00e087871f57d5e7fb1",
+      "6391f047087871f57d5e7fb7",
+      "6391f072087871f57d5e7fbd",
+      "6393330605321e683813e34a"
+    ],
+    "cheapestPrice": 700,
+    "featured": false,
+    "createdAt": "2022-12-31T14:40:05.949Z",
+    "updatedAt": "2022-12-31T14:40:05.949Z",
+    "slug": "el-avenida-palace",
+    "__v": 0
   }
 ]
