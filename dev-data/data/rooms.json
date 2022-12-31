@@ -205,5 +205,42 @@
     "createdAt": "2022-12-09T13:07:18.784Z",
     "updatedAt": "2022-12-12T17:40:54.953Z",
     "__v": 0
+  },
+  {
+    "_id": "63b05a2f32267bbdb40a9e9f",
+    "title": "Double Room",
+    "price": 500,
+    "maxPeople": 2,
+    "desc": "King size bed, 1 bathroom, 2 or more beds",
+    "roomNumbers": [
+      {
+        "number": 401,
+        "unavailableDates": [],
+        "_id": "63b05af832267bbdb40a9eeb"
+      },
+      {
+        "number": 402,
+        "unavailableDates": [],
+        "_id": "63b05af832267bbdb40a9eec"
+      },
+      {
+        "number": 403,
+        "unavailableDates": [],
+        "_id": "63b05af832267bbdb40a9eed"
+      },
+      {
+        "number": 404,
+        "unavailableDates": [],
+        "_id": "63b05af832267bbdb40a9eee"
+      },
+      {
+        "number": 405,
+        "unavailableDates": [],
+        "_id": "63b05af832267bbdb40a9eef"
+      }
+    ],
+    "createdAt": "2022-12-31T15:50:08.006Z",
+    "updatedAt": "2022-12-31T15:53:28.969Z",
+    "__v": 0
   }
 ]
