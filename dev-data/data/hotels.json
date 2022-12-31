@@ -133,6 +133,7 @@
     ],
     "title": "Aliquam ac risus facilisis purus tincidunt elementum sit amet quis eros",
     "desc": "Morbi at quam laoreet, fringilla arcu pretium, congue libero. Sed vel felis vel lorem lacinia hendrerit accumsan ut diam. Proin pellentesque quis lacus vel lacinia. Maecenas cursus dignissim metus posuere suscipit. Nam tincidunt convallis aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer ut purus sed est ornare ultrices non eget ligula. Fusce ac risus in neque accumsan consectetur.",
+    "rating": 8.8,
     "rooms": [
       "637ac408eddcbd99d95dcb0e",
       "6391f00e087871f57d5e7fb1",
