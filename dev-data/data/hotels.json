@@ -144,5 +144,35 @@
     "updatedAt": "2022-12-31T14:26:55.023Z",
     "slug": "disney's-wilderness-lodge",
     "__v": 0
+  },
+  {
+    "_id": "63b047b41744b93233d57830",
+    "name": "Mandarin Oriental, Barcelona",
+    "type": "cabin",
+    "city": "barcelona",
+    "address": "Barcelona, Spain",
+    "distance": "1200",
+    "photos": [
+      "http://res.cloudinary.com/learnhowtocode/image/upload/v1672497076/upload/fz7z8ivnkrqs3upludes.jpg",
+      "http://res.cloudinary.com/learnhowtocode/image/upload/v1672497076/upload/iqptgjjrtcrcltiuhqmc.jpg",
+      "http://res.cloudinary.com/learnhowtocode/image/upload/v1672497076/upload/pbevxncvbxcblzpj9cpa.jpg",
+      "http://res.cloudinary.com/learnhowtocode/image/upload/v1672497075/upload/udgdoogyxjzwgjacldsa.jpg",
+      "http://res.cloudinary.com/learnhowtocode/image/upload/v1672497076/upload/mh02ivcjd4l8mfizznin.jpg"
+    ],
+    "title": "Nulla aliquet, nulla eu dapibus aliquet, mauris est vestibulum risus, vitae feugiat neque orci quis ligula.",
+    "desc": "Morbi at quam laoreet, fringilla arcu pretium, congue libero. Sed vel felis vel lorem lacinia hendrerit accumsan ut diam. Proin pellentesque quis lacus vel lacinia. Maecenas cursus dignissim metus posuere suscipit. Nam tincidunt convallis aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer ut purus sed est ornare ultrices non eget ligula. Fusce ac risus in neque accumsan consectetur.",
+    "rooms": [
+      "637ac408eddcbd99d95dcb0e",
+      "6391f00e087871f57d5e7fb1",
+      "6391f047087871f57d5e7fb7",
+      "6391f072087871f57d5e7fbd",
+      "6393330605321e683813e34a"
+    ],
+    "cheapestPrice": 250,
+    "featured": false,
+    "createdAt": "2022-12-31T14:31:16.820Z",
+    "updatedAt": "2022-12-31T14:31:16.820Z",
+    "slug": "mandarin-oriental-barcelona",
+    "__v": 0
   }
 ]
