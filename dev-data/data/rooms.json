@@ -242,5 +242,47 @@
     "createdAt": "2022-12-31T15:50:08.006Z",
     "updatedAt": "2022-12-31T15:53:28.969Z",
     "__v": 0
+  },
+  {
+    "_id": "63b05c25db0d1dbdf0ab0f79",
+    "title": "Triple Room",
+    "price": 700,
+    "maxPeople": 3,
+    "desc": "3 twin beds, 1 double bed, 1 twin bed, 2 double bed, 1 bathroom",
+    "roomNumbers": [
+      {
+        "number": 701,
+        "unavailableDates": [],
+        "_id": "63b05c25db0d1dbdf0ab0f7a"
+      },
+      {
+        "number": 702,
+        "unavailableDates": [],
+        "_id": "63b05c25db0d1dbdf0ab0f7b"
+      },
+      {
+        "number": 703,
+        "unavailableDates": [],
+        "_id": "63b05c25db0d1dbdf0ab0f7c"
+      },
+      {
+        "number": 704,
+        "unavailableDates": [],
+        "_id": "63b05c25db0d1dbdf0ab0f7d"
+      },
+      {
+        "number": 705,
+        "unavailableDates": [],
+        "_id": "63b05c25db0d1dbdf0ab0f7e"
+      },
+      {
+        "number": 706,
+        "unavailableDates": [],
+        "_id": "63b05c25db0d1dbdf0ab0f7f"
+      }
+    ],
+    "createdAt": "2022-12-31T15:58:29.774Z",
+    "updatedAt": "2022-12-31T15:58:29.774Z",
+    "__v": 0
   }
 ]
