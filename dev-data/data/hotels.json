@@ -24,8 +24,7 @@
     "featured": true,
     "createdAt": "2022-12-31T14:11:42.093Z",
     "updatedAt": "2022-12-31T14:11:42.093Z",
-    "slug": "the-luxury-collection-hotels-and-resorts",
-    "__v": 0
+    "slug": "the-luxury-collection-hotels-and-resorts"
   },
   {
     "_id": "63b044091744b93233d577a4",
@@ -53,8 +52,7 @@
     "featured": true,
     "createdAt": "2022-12-31T14:15:37.417Z",
     "updatedAt": "2022-12-31T14:15:37.417Z",
-    "slug": "london-marriott-hotel-canary-wharf",
-    "__v": 0
+    "slug": "london-marriott-hotel-canary-wharf"
   },
   {
     "_id": "63b044be1744b93233d577b9",
@@ -82,8 +80,7 @@
     "featured": false,
     "createdAt": "2022-12-31T14:18:38.864Z",
     "updatedAt": "2022-12-31T14:18:38.864Z",
-    "slug": "mandarin-oriental-ritz",
-    "__v": 0
+    "slug": "mandarin-oriental-ritz"
   },
   {
     "_id": "63b045791744b93233d577ce",
@@ -112,8 +109,7 @@
     "featured": true,
     "createdAt": "2022-12-31T14:21:45.648Z",
     "updatedAt": "2022-12-31T14:21:45.648Z",
-    "slug": "hotel-viladomat",
-    "__v": 0
+    "slug": "hotel-viladomat"
   },
   {
     "_id": "63b046af1744b93233d57807",
@@ -142,8 +138,7 @@
     "featured": true,
     "createdAt": "2022-12-31T14:26:55.023Z",
     "updatedAt": "2022-12-31T14:26:55.023Z",
-    "slug": "disney's-wilderness-lodge",
-    "__v": 0
+    "slug": "disney's-wilderness-lodge"
   },
   {
     "_id": "63b047b41744b93233d57830",
@@ -172,8 +167,7 @@
     "featured": false,
     "createdAt": "2022-12-31T14:31:16.820Z",
     "updatedAt": "2022-12-31T14:31:16.820Z",
-    "slug": "mandarin-oriental-barcelona",
-    "__v": 0
+    "slug": "mandarin-oriental-barcelona"
   },
   {
     "_id": "63b048ec1744b93233d57857",
@@ -202,8 +196,7 @@
     "featured": true,
     "createdAt": "2022-12-31T14:36:28.210Z",
     "updatedAt": "2022-12-31T14:36:28.210Z",
-    "slug": "riu-plaza-espana",
-    "__v": 0
+    "slug": "riu-plaza-espana"
   },
   {
     "_id": "63b049c51744b93233d5787e",
@@ -233,8 +226,7 @@
     "featured": false,
     "createdAt": "2022-12-31T14:40:05.949Z",
     "updatedAt": "2022-12-31T14:40:05.949Z",
-    "slug": "el-avenida-palace",
-    "__v": 0
+    "slug": "el-avenida-palace"
   },
   {
     "_id": "63b04cdd1744b93233d578bb",
@@ -262,8 +254,6 @@
     "cheapestPrice": 1000,
     "featured": true,
     "createdAt": "2022-12-31T14:53:17.009Z",
-    "updatedAt": "2022-12-31T14:53:17.009Z",
-    "slug": "eko-hotel",
-    "__v": 0
+    "updatedAt": "2022-12-31T14:53:17.009Z"
   }
 ]
