@@ -84,5 +84,35 @@
     "updatedAt": "2022-12-31T14:18:38.864Z",
     "slug": "mandarin-oriental-ritz",
     "__v": 0
+  },
+  {
+    "_id": "63b045791744b93233d577ce",
+    "name": "Hotel Viladomat",
+    "type": "hotel",
+    "city": "barcelona",
+    "address": "Barcelona, Spain",
+    "distance": "800",
+    "photos": [
+      "http://res.cloudinary.com/learnhowtocode/image/upload/v1672496504/upload/vgn0bv3xncwwmghtzwom.jpg",
+      "http://res.cloudinary.com/learnhowtocode/image/upload/v1672496504/upload/ry4bzktttxasxbra25fh.jpg",
+      "http://res.cloudinary.com/learnhowtocode/image/upload/v1672496504/upload/pko5udgy35eptmuhyygu.jpg",
+      "http://res.cloudinary.com/learnhowtocode/image/upload/v1672496505/upload/e7eheum6vq4xpkp2g1xl.jpg",
+      "http://res.cloudinary.com/learnhowtocode/image/upload/v1672496504/upload/pveejofrnxlyzecqn9wx.jpg"
+    ],
+    "title": "Sed dignissim, nibh et pulvinar porttitor, dolor risus consectetur nisl, in tincidunt tellus urna in massa.",
+    "desc": "Morbi nec sodales est. Nulla fringilla ipsum odio, ac sagittis leo accumsan sed. Sed dignissim, nibh et pulvinar porttitor, dolor risus consectetur nisl, in tincidunt tellus urna in massa. Donec cursus ligula sed turpis sagittis porttitor. Morbi in risus eu arcu accumsan hendrerit id lobortis tortor. Aliquam ac risus facilisis purus tincidunt elementum sit amet quis eros. Nulla aliquet, nulla eu dapibus aliquet, mauris est vestibulum risus, vitae feugiat neque orci quis ligula.",
+    "rooms": [
+      "637ac408eddcbd99d95dcb0e",
+      "6391f00e087871f57d5e7fb1",
+      "6391f047087871f57d5e7fb7",
+      "6391f072087871f57d5e7fbd",
+      "6393330605321e683813e34a"
+    ],
+    "cheapestPrice": 450,
+    "featured": true,
+    "createdAt": "2022-12-31T14:21:45.648Z",
+    "updatedAt": "2022-12-31T14:21:45.648Z",
+    "slug": "hotel-viladomat",
+    "__v": 0
   }
 ]
