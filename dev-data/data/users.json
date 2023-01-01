@@ -188,5 +188,21 @@
     "createdAt": "2023-01-01T00:26:49.325Z",
     "updatedAt": "2023-01-01T00:26:49.325Z",
     "__v": 0
+  },
+  {
+    "_id": "63b0d39689365677cc423f9b",
+    "name": "Max Smith",
+    "username": "max",
+    "email": "max@example.com",
+    "country": "Spain",
+    "img": "http://res.cloudinary.com/learnhowtocode/image/upload/v1672532886/upload/gdscqrc5wk0b0z6hmbmr.jpg",
+    "city": "Madrid",
+    "phone": "+7852789252",
+    "password": "$2a$12$hy0ZZ/IgeJGOJjVD92M8h.TNB7pv8jCuroc2/J99qz49H0n749XD6",
+    "role": "user",
+    "active": true,
+    "createdAt": "2023-01-01T00:28:06.326Z",
+    "updatedAt": "2023-01-01T00:28:06.326Z",
+    "__v": 0
   }
 ]
