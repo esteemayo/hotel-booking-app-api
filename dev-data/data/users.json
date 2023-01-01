@@ -124,5 +124,21 @@
     "role": "user",
     "createdAt": "2022-12-30T17:27:17.820Z",
     "updatedAt": "2022-12-30T17:27:17.820Z"
+  },
+  {
+    "_id": "63b0d21889365677cc423f89",
+    "name": "Aarav Lynn",
+    "username": "aarav",
+    "email": "aarav@example.com",
+    "country": "USA",
+    "img": "http://res.cloudinary.com/learnhowtocode/image/upload/v1672532504/upload/fxztfl9qrsav372iuo45.jpg",
+    "city": "Hawaii",
+    "phone": "+19056824741",
+    "password": "$2a$12$urRdPXvWUB2ktTCDjqWLcO38M2s/mqUhcw599hpefPUDf9vbehPEu",
+    "role": "user",
+    "active": true,
+    "createdAt": "2023-01-01T00:21:44.741Z",
+    "updatedAt": "2023-01-01T00:21:44.741Z",
+    "__v": 0
   }
 ]
