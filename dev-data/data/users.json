@@ -140,5 +140,21 @@
     "createdAt": "2023-01-01T00:21:44.741Z",
     "updatedAt": "2023-01-01T00:21:44.741Z",
     "__v": 0
+  },
+  {
+    "_id": "63b0d27a89365677cc423f8d",
+    "name": "Miyah Myles",
+    "username": "miyah",
+    "email": "miyah@example.com",
+    "country": "England",
+    "img": "http://res.cloudinary.com/learnhowtocode/image/upload/v1672532603/upload/mvmtr72tj7cshl6uj3q0.jpg",
+    "city": "Manchester",
+    "phone": "+3086456942",
+    "password": "$2a$12$x0fqT.kUHtRNlO2M8cwdyeOn9NkOjcfbqz/bMucEBUnQhDdghsq5O",
+    "role": "user",
+    "active": true,
+    "createdAt": "2023-01-01T00:23:22.873Z",
+    "updatedAt": "2023-01-01T00:23:22.873Z",
+    "__v": 0
   }
 ]
