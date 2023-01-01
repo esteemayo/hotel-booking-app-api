@@ -204,5 +204,21 @@
     "createdAt": "2023-01-01T00:28:06.326Z",
     "updatedAt": "2023-01-01T00:28:06.326Z",
     "__v": 0
+  },
+  {
+    "_id": "63b0d3d889365677cc423f9f",
+    "name": "Isabel Kirkland",
+    "username": "isabel",
+    "email": "isabel@example.com",
+    "country": "Spain",
+    "img": "http://res.cloudinary.com/learnhowtocode/image/upload/v1672532953/upload/ulkn6jic0naejhbovixm.jpg",
+    "city": "Barcelona",
+    "phone": "+96356287636",
+    "password": "$2a$12$XojENBl1IJyKVz5qQvX6QulQD0NjzDR2K79J1CWcuZm5asDNAliAq",
+    "role": "user",
+    "active": true,
+    "createdAt": "2023-01-01T00:29:12.979Z",
+    "updatedAt": "2023-01-01T00:29:12.979Z",
+    "__v": 0
   }
 ]
