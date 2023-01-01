@@ -151,7 +151,6 @@
     "phone": "+3086456942",
     "password": "$2a$12$x0fqT.kUHtRNlO2M8cwdyeOn9NkOjcfbqz/bMucEBUnQhDdghsq5O",
     "role": "user",
-    "active": true,
     "createdAt": "2023-01-01T00:23:22.873Z",
     "updatedAt": "2023-01-01T00:23:22.873Z"
   },
