@@ -3,7 +3,7 @@ const createSendToken = (user, status, req, res) => {
 
   res.cookie('access_token', token, {
     expires: new Date(
-      Date.now() + process.env.JWT_COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000
+      Date.now() + process.env.JWT_COOKIE_EXPIRES_IN * 60 * 60 * 1000
     ),
     httpOnly: true,
     sameSite: true,
